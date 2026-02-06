@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magia Responsiva</title>
+    <style>
+        /* --- ESTILOS BASE (Escritorio) --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        /* Grid de 3 columnas */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .tarjeta {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .img-responsiva {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .banner-anuncio {
+            background: #e74c3c;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* --- MAGIA RESPONSIVA (@media) --- */
+        @media (max-width: 768px) {
+            /* 1. Aumentar tamaño de letra para lectura fácil */
+            body {
+                font-size: 110%; 
+            }
+
+            /* 2. Grid de 3 columnas a 1 sola columna */
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+
+            /* 3. Ocultar elementos innecesarios (como anuncios o decoraciones) */
+            .banner-anuncio {
+                display: none;
+            }
+
+            /* 4. Ajustar márgenes para no desperdiciar espacio */
+            .contenedor {
+                margin: 0;
+                padding: 15px;
+            }
+
+            header {
+                padding: 1rem;
+            }
+
+            /* 5. Asegurar que nada cause scroll horizontal */
+            img, .tarjeta {
+                max-width: 100%;
+                box-sizing: border-box; /* Evita que el padding sume al ancho */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Sitio Responsivo</h1>
+        <p>Abre las herramientas de desarrollador (F12) y prueba el modo móvil.</p>
+    </header>
+
+    <div class="banner-anuncio">
+        📢 ¡Este anuncio solo se ve en pantallas grandes! (Innecesario en móvil)
+    </div>
+
+    <div class="contenedor">
+        <div class="grid-layout">
+            <div class="tarjeta">
+                <h3>Columna 1</h3>
+                <img src="https://picsum.photos/400/250?random=1" alt="Imagen" class="img-responsiva">
+                <p>En móvil, esta tarjeta ocupará todo el ancho disponible.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>Columna 2</h3>
+                <img src="https://picsum.photos/400/250?random=2" alt="Imagen" class="img-responsiva">
+                <p>La tipografía se ajusta para que no tengas que forzar la vista.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>Columna 3</h3>
+                <img src="https://picsum.photos/400/250?random=3" alt="Imagen" class="img-responsiva">
+                <p>Las imágenes nunca se salen de su contenedor.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

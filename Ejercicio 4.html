@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Contenedor principal: ocupa todo el ancho */
+        nav {
+            width: 100%;
+            background-color: #ffffff;
+            border-bottom: 2px solid #f0f0f0;
+            padding: 15px 0;
+        }
+
+        /* Lista: eliminamos puntos y alineamos en fila */
+        nav ul {
+            list-style-type: none; /* Quita los puntos molestos */
+            margin: 0;
+            padding: 0;
+            display: flex; /* Alinea los elementos uno al lado del otro */
+            justify-content: center; /* Centra el menú en la barra */
+        }
+
+        /* Espacio uniforme entre cada botón */
+        nav li {
+            margin: 0 20px;
+        }
+
+        /* Enlaces: quitamos subrayado y damos estilo */
+        nav a {
+            text-decoration: none; /* Adiós al subrayado azul */
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500;
+            transition: color 0.3s ease; /* Suaviza el cambio de color */
+        }
+
+        /* Efecto Hover: cambia el color al pasar el mouse */
+        nav a:hover {
+            color: #007BFF; /* Un azul moderno al posicionarse */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Proyectos</a></li>
+            <li><a href="#">Galería</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

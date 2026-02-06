@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Cebra Profesional</title>
+    <style>
+        /* Estilo base de la tabla */
+        table {
+            width: 80%;
+            margin: 40px auto;
+            border-collapse: collapse; /* Elimina el espacio entre bordes */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 8px;
+            overflow: hidden; /* Para que los bordes redondeados funcionen */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ajuste de padding en celdas */
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+        }
+
+        /* Configuración del encabezado */
+        thead tr {
+            background-color: #1f2937; /* Color oscuro */
+            color: #ffffff;            /* Texto blanco */
+            font-weight: bold;         /* Negrita */
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Efecto Cebra: Filas Pares */
+        tbody tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        /* Efecto Cebra: Filas Impares */
+        tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        /* Efecto Hover al pasar el ratón */
+        tbody tr:hover {
+            background-color: #e5e7eb;
+            transition: background-color 0.2s;
+            cursor: pointer;
+        }
+
+        /* Un toque extra: borde inferior discreto */
+        td {
+            border-bottom: 1px solid #edf2f7;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center; font-family: sans-serif; color: #374151;">Gestión de Inventario 2026</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Stock</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#001</td>
+                <td>Laptop Pro X</td>
+                <td>Electrónica</td>
+                <td>15</td>
+                <td>$1,200</td>
+            </tr>
+            <tr>
+                <td>#002</td>
+                <td>Monitor 4K</td>
+                <td>Periféricos</td>
+                <td>8</td>
+                <td>$450</td>
+            </tr>
+            <tr>
+                <td>#003</td>
+                <td>Teclado Mecánico</td>
+                <td>Accesorios</td>
+                <td>25</td>
+                <td>$120</td>
+            </tr>
+            <tr>
+                <td>#004</td>
+                <td>Silla Ergonómica</td>
+                <td>Muebles</td>
+                <td>10</td>
+                <td>$300</td>
+            </tr>
+            <tr>
+                <td>#005</td>
+                <td>Disco SSD 1TB</td>
+                <td>Almacenamiento</td>
+                <td>50</td>
+                <td>$90</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

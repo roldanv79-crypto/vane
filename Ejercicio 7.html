@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dominando el Box Model</title>
+    <style>
+        /* El truco del profesional: Evita que el padding y border sumen ancho extra */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+        }
+
+        .contenedor {
+            display: flex; /* Para ponerlas en la misma línea */
+            gap: 20px;     /* Espacio moderno entre cajas */
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tarjeta {
+            /* 1. Dimensiones */
+            width: 280px;
+            
+            /* 2. Padding (El aire interno) */
+            padding: 25px;
+            
+            /* 3. Margen (El aire externo) */
+            margin: 10px;
+            
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Variaciones de estilos y bordes */
+        .diseno {
+            background-color: #ffadad;
+            border: 4px solid #ff4d4d; /* Borde sólido grueso */
+            border-radius: 15px;
+        }
+
+        .desarrollo {
+            background-color: #9bf6ff;
+            border: 2px dashed #0077b6; /* Borde discontinuo */
+        }
+
+        .marketing {
+            background-color: #caffbf;
+            border: 8px double #38b000; /* Borde doble */
+            border-radius: 50px 5px;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="tarjeta diseno">
+            <h2>Diseño UI/UX</h2>
+            <p>Creamos interfaces que enamoran a primera vista.</p>
+        </div>
+
+        <div class="tarjeta desarrollo">
+            <h2>Desarrollo</h2>
+            <p>Código limpio, escalable y listo para el futuro.</p>
+        </div>
+
+        <div class="tarjeta marketing">
+            <h2>Marketing</h2>
+            <p>Estrategias digitales para escalar tu negocio.</p>
+        </div>
+    </div>
+
+</body>
+</html>

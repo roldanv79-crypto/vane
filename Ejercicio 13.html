@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Noticias con CSS Grid</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e74c3c;
+            --text: #333;
+            --bg: #f0f2f5;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Contenedor Principal */
+        .grid-container {
+            display: grid;
+            width: 100%;
+            max-width: 1200px;
+            min-height: 100vh;
+            
+            /* Definición de la rejilla */
+            grid-template-columns: 1fr 300px; /* Contenido flexible y Sidebar fijo */
+            grid-template-rows: auto 1fr auto; /* Altura automática para header/footer */
+            
+            /* Nombramiento de zonas */
+            grid-template-areas: 
+                "header  header"
+                "main    sidebar"
+                "footer  footer";
+            
+            /* Espaciado entre celdas */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Asignación de elementos a las áreas */
+        header { grid-area: header; }
+        main   { grid-area: main; }
+        aside  { grid-area: sidebar; }
+        footer { grid-area: footer; }
+
+        /* Estilos visuales para los bloques */
+        header, main, aside, footer {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 { margin: 0; font-size: 1.5rem; text-transform: uppercase; }
+
+        .featured-article {
+            border-bottom: 2px solid var(--bg);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .featured-article h2 { color: var(--accent); margin-top: 0; }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .news-item {
+            background: var(--bg);
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        aside h3 { 
+            border-left: 4px solid var(--accent); 
+            padding-left: 10px; 
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        /* Responsividad: En pantallas pequeñas, todo a una columna */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <header>
+            <h1>Global News</h1>
+            <nav>Inicio | Internacional | Tech</nav>
+        </header>
+
+        <main>
+            <article class="featured-article">
+                <h2>El futuro de la IA en 2026</h2>
+                <p>La integración de sistemas autónomos ha alcanzado un nuevo hito en la industria global...</p>
+            </article>
+
+            <div class="news-grid">
+                <div class="news-item"><b>Clima:</b> Tormentas solares afectan satélites.</div>
+                <div class="news-item"><b>Economía:</b> El mercado digital sube un 15%.</div>
+                <div class="news-item"><b>Deportes:</b> Resultados de la jornada nocturna.</div>
+            </div>
+        </main>
+
+        <aside>
+            <h3>Más Leídas</h3>
+            <ul>
+                <li>Cómo aprender CSS Grid en 5 minutos.</li>
+                <li>Las 10 ciudades más sostenibles.</li>
+                <li>Recetas para el teletrabajo.</li>
+            </ul>
+        </aside>
+
+        <footer>
+            &copy; 2026 - Periódico Digital - Todos los derechos reservados.
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mastering Flexbox</title>
+    <style>
+        header {
+            /* 1. El corazón del layout */
+            display: flex;
+            
+            /* 2. Distribuye logo a un lado y links al otro */
+            justify-content: space-between;
+            
+            /* 3. Centrado vertical perfecto */
+            align-items: center;
+            
+            /* 4. Adaptabilidad: si no caben, saltan de línea */
+            flex-wrap: wrap;
+            
+            padding: 1rem 5%;
+            background-color: #2c3e50;
+            color: white;
+            gap: 20px; /* Espacio mínimo entre elementos */
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            /* Probando el orden: por defecto es 0, si pones 2 se irá al final */
+            order: 1; 
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            /* Los links tendrán orden 2 para aparecer después del logo */
+            order: 2;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        /* Ejemplo de cambio de orden mediante una clase */
+        .reverse-order {
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"> MiBrand</div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+</html>

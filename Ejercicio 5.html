@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería Elegante</title>
+    <style>
+        /* Contenedor para organizar en una fila simple */
+        .galeria {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        /* La caja (figure) */
+        figure {
+            background: white;
+            margin: 0;
+            padding: 10px;
+            /* Borde elegante y sombreado para flotar */
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            /* Control de ancho para la fila */
+            flex: 1;
+            max-width: 300px;
+        }
+
+        /* Imagen fluida: no se sale de la caja */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Pie de foto centrado y en cursiva */
+        figcaption {
+            text-align: center;
+            font-style: italic;
+            padding: 12px 5px 5px 5px;
+            color: #444;
+            font-family: 'Georgia', serif;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="galeria">
+        
+        <figure>
+            <img src="https://picsum.photos/400/300?random=1" alt="Imagen 1">
+            <figcaption>Explorando la serenidad del paisaje.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://picsum.photos/400/300?random=2" alt="Imagen 2">
+            <figcaption>Arquitectura de vanguardia.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://picsum.photos/400/300?random=3" alt="Imagen 3">
+            <figcaption>El arte en los pequeños detalles.</figcaption>
+        </figure>
+
+    </section>
+
+</body>
+</html>
+

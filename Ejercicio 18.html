@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Footer Profesional - Flexbox</title>
+    <style>
+        /* RESET BÁSICO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* CONFIGURACIÓN DEL PADRE 
+           Usamos min-height para que el cuerpo siempre mida, 
+           como mínimo, el 100% de la altura de la ventana (100vh).
+        */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+        }
+
+        /* EL TRUCO DEL CONTENIDO
+           Flex-grow: 1 hace que esta sección se expanda para ocupar 
+           todo el espacio vertical sobrante, enviando al footer al fondo.
+        */
+        main {
+            flex-grow: 1;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ESTILOS DEL FOOTER */
+        footer {
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Mi Proyecto Web</h2>
+    </header>
+
+    <main>
+        <div class="card">
+            <h1>Contenido del Sitio</h1>
+            <p>Este es un ejemplo de cómo solucionar el problema del footer flotante.</p>
+            <p>Aunque borres todo este texto, el footer <strong>seguirá pegado a la base</strong> de la pantalla gracias a <code>flex-grow: 1</code>.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Desarrollado con Flexbox Estricto</p>
+    </footer>
+
+</body>
+</html>
