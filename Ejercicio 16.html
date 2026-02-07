@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables CSS Pro</title>
+    <link rel="stylesheet" href="Ejercicio 16.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Arquitectura CSS Profesional</h1>
+        <p>Este documento utiliza variables en el scope raíz para una gestión de color eficiente.</p>
+        
+        <button id="theme-toggle">Cambiar Modo</button>
+    </div>
+
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>

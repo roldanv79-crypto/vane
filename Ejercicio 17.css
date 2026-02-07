@@ -1,0 +1,57 @@
+/* Estilos base para centrar todo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    flex-direction: column;
+    gap: 50px;
+    font-family: sans-serif;
+}
+
+/* --- EL CARGADOR (SPINNER) --- */
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #e0e0e0;
+    border-top: 5px solid #3498db; /* Color del giro */
+    border-radius: 50%;
+    
+    /* Aplicamos la animación */
+    animation: girar 1s linear infinite;
+}
+
+/* Definimos la rotación de 0 a 360 grados */
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- EL BOTÓN CON REBOTE --- */
+.btn-bounce {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    
+    /* Animación de rebote: 2 segundos, suave, para siempre */
+    animation: rebote 2s ease-in-out infinite;
+}
+
+/* Definimos los pasos del rebote usando escala */
+@keyframes rebote {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}

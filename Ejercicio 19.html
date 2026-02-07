@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltips Pro con CSS</title>
+    <link rel="stylesheet" href="Ejercicio 19.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>Tooltips con <span class="highlight">Pure CSS</span></h1>
+        
+        <p>
+            En este ejemplo, estamos usando atributos de datos para mostrar información. 
+            Pasa el cursor sobre los elementos destacados:
+        </p>
+
+        <p>
+            El desarrollo web es 
+            <span class="tooltip" data-tooltip="HTML, CSS y JavaScript trabajando juntos.">fascinante</span> 
+            y siempre hay algo nuevo que aprender sobre 
+            <span class="tooltip" data-tooltip="Hojas de Estilo en Cascada">CSS</span>.
+        </p>
+
+        <div class="button-group">
+            <button class="tooltip" data-tooltip="¡Haz clic para guardar!">Guardar Cambios</button>
+            <button class="tooltip" data-tooltip="Se borrará permanentemente.">Eliminar</button>
+        </div>
+    </div>
+
+</body>
+</html>

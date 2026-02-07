@@ -1,0 +1,52 @@
+/* Configuración básica */
+body {
+    background-color: #f4f7f6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor en fila ordenada */
+.galeria-container {
+    display: flex;
+    gap: 25px;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que bajen si no caben en pantalla */
+}
+
+/* Caja de cada fotografía */
+.foto-card {
+    background: #ffffff;
+    margin: 0;
+    padding: 12px;
+    border: 1px solid #eaeaea; /* Borde elegante */
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    max-width: 320px; /* Controla el ancho de la caja */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de elevación */
+.foto-card:hover {
+    transform: translateY(-8px);
+}
+
+/* La imagen no se sale de su caja y es fluida */
+.foto-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+/* Pie de foto centrado y en cursiva */
+figcaption {
+    margin-top: 15px;
+    text-align: center;
+    font-style: italic;
+    color: #444;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

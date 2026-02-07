@@ -1,0 +1,40 @@
+/* Reseteo básico para que la barra ocupe todo el ancho real */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal: Ocupa todo el ancho */
+.navbar {
+    background-color: #2c3e50;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* Lista: Quitamos puntos y alineamos con Flexbox */
+.nav-list {
+    list-style-type: none; /* Sin puntos molestos */
+    display: flex;         /* Alineación horizontal */
+    justify-content: center; /* Centra los botones */
+}
+
+/* Espacio uniforme entre los elementos */
+.nav-list li {
+    margin: 0 25px;
+}
+
+/* Enlaces: Quitamos el azul y el subrayado */
+.nav-list a {
+    text-decoration: none; /* Sin subrayado */
+    color: #ecf0f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+/* Hover: Cambio de color al pasar el mouse */
+.nav-list a:hover {
+    color: #3498db;
+}

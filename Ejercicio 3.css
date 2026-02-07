@@ -1,0 +1,75 @@
+/* Configuración Global */
+body {
+    background-color: #0f172a; /* Azul noche profundo */
+    color: #f1f5f9;            /* Blanco azulado suave */
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;          /* Interlineado amplio para legibilidad */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor Principal con Margen de Respiración */
+.container {
+    max-width: 800px;
+    margin: 40px;
+    padding: 60px;
+    background-color: #1e293b; /* Fondo de tarjeta */
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Alineación y Pesos de Fuente */
+header {
+    text-align: center;        /* Centrado para impacto visual */
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 900;          /* Peso máximo para resaltar */
+    line-height: 1.1;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.highlight {
+    color: #38bdf8;            /* Azul eléctrico moderno */
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #94a3b8;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #38bdf8;
+    text-align: left;          /* Alineación clásica para lectura */
+    border-left: 5px solid #38bdf8;
+    padding-left: 15px;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+/* Botón con personalidad */
+.btn-primary {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    background-color: #7dd3fc;
+}

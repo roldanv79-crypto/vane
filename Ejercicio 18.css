@@ -1,0 +1,65 @@
+/* Reset básico para evitar espacios indeseados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* El truco maestro: alto total y flexbox en el body */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Estilos del Header */
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/* EL CORAZÓN DE LA SOLUCIÓN: flex-grow: 1 */
+.content {
+    flex: 1; /* Esto hace que el main crezca y ocupe todo el espacio sobrante */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Estilos del Footer */
+footer {
+    background-color: #f4f4f4;
+    color: #666;
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #ddd;
+    /* Asegura que el footer no se encoja si el contenido es mucho */
+    flex-shrink: 0;
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}

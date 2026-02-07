@@ -1,0 +1,92 @@
+/* Estilos base para la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.main-container {
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.highlight {
+    color: #3498db;
+}
+
+/* LÓGICA DEL TOOLTIP */
+
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    color: #2c3e50;
+    border-bottom: 2px dashed #3498db;
+}
+
+/* El cuadro del tooltip */
+.tooltip::after {
+    content: attr(data-tooltip); /* Extrae texto del HTML */
+    position: absolute;
+    bottom: 150%; /* Distancia sobre el texto */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); /* Empieza un poco abajo para la animación */
+    
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: normal;
+    white-space: nowrap;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    
+    /* Estado oculto */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: none; /* Evita que el tooltip interfiera con el mouse */
+}
+
+/* La flecha */
+.tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    
+    border-width: 8px;
+    border-style: solid;
+    border-color: #2c3e50 transparent transparent transparent;
+    
+    /* Estado oculto */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Hover: Mostrar y animar */
+.tooltip:hover::after, 
+.tooltip:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0); /* Sube suavemente */
+}
+
+/* Ajuste para botones */
+button.tooltip {
+    padding: 10px 20px;
+    border: none;
+    background: #3498db;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+}

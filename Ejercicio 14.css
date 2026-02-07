@@ -1,0 +1,77 @@
+/* Configuración básica */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* La Tarjeta */
+.product-card {
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    /* Transición suave para el color de fondo y la sombra */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de imagen para que el zoom no se salga */
+.image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Transición para el efecto de zoom */
+    transition: transform 0.5s ease;
+}
+
+/* Información del producto */
+.product-info {
+    padding: 20px;
+    /* Transición para el movimiento del texto */
+    transition: transform 0.5s ease;
+}
+
+.price {
+    font-weight: bold;
+    color: #2a9d8f;
+    font-size: 1.2rem;
+}
+
+/* --- ESTADOS HOVER --- */
+
+.product-card:hover {
+    background-color: #f9f9f9; /* Cambio sutil de fondo */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Sombra más profunda */
+}
+
+.product-card:hover .image-container img {
+    transform: scale(1.1); /* Zoom de la imagen */
+}
+
+.product-card:hover .product-info {
+    transform: translateY(-10px); /* El texto sube ligeramente */
+}
+
+/* Botón simple para completar el diseño */
+.btn-buy {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #264653;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

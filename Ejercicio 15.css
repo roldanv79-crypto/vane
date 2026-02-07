@@ -1,0 +1,51 @@
+/* --- Estilos Base (Enfoque Móvil primero) --- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 10px; /* Márgenes mínimos para no desperdiciar espacio */
+    font-size: 18px; /* Letra más grande para legibilidad en móvil */
+    line-height: 1.6;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna por defecto */
+    gap: 15px;
+}
+
+.responsive-img {
+    max-width: 100%; /* Evita el scroll horizontal */
+    height: auto;
+    display: block;
+}
+
+/* Ocultar elementos innecesarios en móvil */
+.hide-mobile {
+    display: none;
+}
+
+/* --- Media Query para Pantallas Grandes (Tablets/Desktop) --- */
+@media (min-width: 768px) {
+    body {
+        font-size: 16px; /* Reducimos un poco el tamaño en PC */
+        padding: 40px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Volvemos a 3 columnas */
+    }
+
+    .hide-mobile {
+        display: block; /* Mostramos elementos secundarios */
+    }
+}
+
+/* --- Ajuste para Rotación (Landscape en móviles) --- */
+@media (max-height: 500px) and (orientation: landscape) {
+    header {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+}

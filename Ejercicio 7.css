@@ -1,0 +1,62 @@
+/* RESET Y BOX-SIZING: Fundamental para evitar cálculos locos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fdfdfd;
+    padding: 50px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* CONTENEDOR FLEX: Para que las cajas quepan en la misma línea */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que bajen si no hay espacio */
+    max-width: 1100px;
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+}
+
+/* CONFIGURACIÓN DE LAS CAJAS */
+.card {
+    width: 300px;         /* Ancho fijo para control */
+    margin: 15px;         /* MARGEN: Separación externa entre tarjetas */
+    padding: 35px;        /* PADDING: Aire interno para el contenido */
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* ESTILOS ESPECÍFICOS (Color y Bordes) */
+
+.service-ui {
+    background-color: #e0f2fe; /* Azul claro */
+    border: 3px solid #0369a1; /* Borde sólido estándar */
+}
+
+.service-dev {
+    background-color: #fef3c7; /* Ámbar claro */
+    border: 3px dashed #d97706; /* Borde estilo "trazos" */
+}
+
+.service-seo {
+    background-color: #dcfce7; /* Verde claro */
+    border: 6px double #15803d; /* Borde estilo doble */
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+p {
+    color: #555;
+    line-height: 1.5;
+}

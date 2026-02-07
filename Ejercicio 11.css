@@ -1,0 +1,26 @@
+/* Botón Flotante */
+.btn-flotante {
+    position: fixed;        /* Lo ancla a la pantalla, no al contenido */
+    bottom: 30px;           /* Distancia desde abajo */
+    right: 30px;            /* Distancia desde la derecha */
+    width: 60px;            /* Ancho fijo para hacerlo circular */
+    height: 60px;           /* Alto igual al ancho */
+    background-color: #ff4757; /* Color vibrante (Coral/Rojo) */
+    color: white;           /* Color de la flecha */
+    border-radius: 50%;     /* Lo hace perfectamente circular */
+    display: flex;          /* Para centrar la flecha */
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;  /* Quita el subrayado del link */
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra para dar profundidad */
+    z-index: 9999;          /* Asegura que esté por encima de TODO */
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.btn-flotante:hover {
+    background-color: #e84118;
+    transform: scale(1.1);  /* Crece un poquito al tocarlo */
+}

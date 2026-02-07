@@ -1,0 +1,31 @@
+.btn-cta {
+  /* 1. Eliminamos la decoración por defecto */
+  text-decoration: none;
+  display: inline-block;
+  
+  /* 2. Cuerpo y tamaño con padding */
+  padding: 15px 35px;
+  
+  /* 3. Look moderno: esquinas redondeadas */
+  border-radius: 50px;
+  
+  /* 4. Color y contraste */
+  background-color: #007BFF; /* Un azul vibrante */
+  color: #ffffff;            /* Texto blanco para legibilidad */
+  font-weight: bold;
+  font-family: sans-serif;
+  
+  /* 5. Interacción y suavidad */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición fluida */
+  
+  /* Extra: Sombra sutil para dar profundidad */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 6. Efecto al pasar el ratón (Hover) */
+.btn-cta:hover {
+  background-color: #0056b3; /* Oscurece un poco al interactuar */
+  transform: translateY(-2px); /* Pequeño salto hacia arriba */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}

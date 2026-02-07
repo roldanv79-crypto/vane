@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Vivo e Interactivo</title>
+    <link rel="stylesheet" href="Ejercicio 12.css">
+</head>
+<body>
+
+    <div class="container">
+        <form id="registroForm">
+            <h2>Crear Cuenta</h2>
+            <p class="subtitle">Completa los campos para continuar</p>
+
+            <div class="input-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+                <span class="error-msg">Este campo es obligatorio.</span>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+                <span class="error-msg">Introduce un correo válido.</span>
+            </div>
+
+            <div class="input-group">
+                <label for="pass">Contraseña (mín. 6 caracteres)</label>
+                <input type="password" id="pass" minlength="6" required>
+                <span class="error-msg">Debe tener al menos 6 caracteres.</span>
+            </div>
+
+            <button type="submit" id="btnEnviar">Registrarme</button>
+        </form>
+    </div>
+
+</body>
+</html>
