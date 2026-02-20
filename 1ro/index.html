@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link 
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" 
+        rel="stylesheet" 
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Triangle Website Hero | HTML, CSS, JavaScript</title>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">Logo</a>
+        <div class="header-right">
+            <ul class="nav">
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <a href="#" class="menu" onclick="toggleMenu();"
+                ><i class="bx bx-menu-alt-right"></i
+            ></a>
+        </div>
+    </header>
+    <ul class="nav-mobile">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="banner">
+        <a href="#" class="share"><i class="bx bxs-share-alt"></i></a>
+        <!--Triangle-->
+        <div class="triangle one">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <img src="./images/img-1.jpg" alt="" />
+                </div>
+                <div class="flip-card-back">
+                    <p>Lorem ipsum dolor sit</p>
+                    <a href="#" class="play"><i class="bx bx-play-circle"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="triangle two">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <img src="./images/img-2.jpg" alt="" />
+                </div>
+                <div class="flip-card-back">
+                    <p>Lorem ipsum dolor sit</p>
+                    <a href="#" class="play"><i class="bx bx-play-circle"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="triangle three">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <img src="./images/img-3.jpg" alt="" />
+                </div>
+                <div class="flip-card-back">
+                    <p>Lorem ipsum dolor sit</p>
+                    <a href="#" class="play"><i class="bx bx-play-circle"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="triangle four video-container video-2">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <video 
+                        class="video-2"
+                        src="./videos/trailer-2.mp4" 
+                        autoplay
+                        loop
+                        muted
+                    ></video>
+                </div>
+                <div class="flip-card-back">
+                    <p>Lorem ipsum dolor sit</p>
+                    <a href="#" class="play" onclick="changeVideo('video-2')"><i class="bx bx-play-circle"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="triangle five video-container video-1">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <video 
+                        class="video-1"
+                        src="./videos/trailer-1.mp4" 
+                        autoplay
+                        loop
+                        muted
+                    ></video>
+                </div>
+                <div class="flip-card-back">
+                    <p>Lorem ipsum dolor sit</p>
+                    <a href="#" class="play" onclick="changeVideo('video-1')"><i class="bx bx-play-circle"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="triangle six">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <img src="./images/img-6.jpg" alt="" />
+                </div>
+                <div class="flip-card-back">
+                    <p>Lorem ipsum dolor sit</p>
+                    <a href="#" class="play"><i class="bx bx-play-circle"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="triangle seven">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <img src="./images/img-7.jpg" alt="" />
+                </div>
+                <div class="flip-card-back">
+                    <p>Lorem ipsum dolor sit</p>
+                    <a href="#" class="play"><i class="bx bx-play-circle"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!--Inversed Triangle-->
+        <div class="triangle-inverse one">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <img src="./images/img-4.jpg" alt="" />
+                </div>
+                <div class="flip-card-back">                
+                    <a href="#" class="play"><i class="bx bx-play-circle"></i></a>
+                    <p>Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="triangle-inverse two">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <img src="./images/img-8.jpg" alt="" />
+                </div>
+                <div class="flip-card-back">
+                    <a href="#" class="play"><i class="bx bx-play-circle"></i></a>
+                    <p>Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="triangle-inverse three video-container video-3 active">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <video 
+                        class="video-3"
+                        src="./videos/trailer-3.mp4" 
+                        autoplay
+                        loop
+                        muted
+                    ></video>
+                </div>
+                <div class="flip-card-back">
+                    <a href="#" class="play"><i class="bx bx-play-circle"></i></a>
+                    <p>Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="triangle-inverse four">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <img src="./images/img-10.jpg" alt="" />
+                </div>
+                <div class="flip-card-back">
+                    <a href="#" class="play"><i class="bx bx-play-circle"></i></a>
+                    <p>Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+        </div>
+        <div class="triangle-inverse five">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <img src="./images/img-5.jpg" alt="" />
+                </div>
+                <div class="flip-card-back">
+                    <a href="#" class="play"><i class="bx bx-play-circle"></i></a>
+                    <p>Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+        </div>
+        <!--Banner Title-->
+        <div class="banner-title">
+            <h1>Mo<span class="text-special">D</span>els</h1>
+            <span class="subtitle">A Creative Community</span>  
+        </div>
+
+        <!--Banner Background video list-->
+        <div class="bg-video-list">
+            <video class="bg-video video-1"  
+            src="./videos/trailer-1.mp4" 
+            autoplay 
+            loop
+            muted
+            ></video>
+            <video 
+            class="bg-video video-2"  
+                src="./videos/trailer-2.mp4" 
+                autoplay 
+                loop
+                muted
+            ></video>
+            <video 
+            class="bg-video video-3 active"  
+                src="./videos/trailer-3.mp4" 
+                autoplay 
+                loop
+                muted
+            ></video>
+        </div>
+
+        <!-- Banner Content -->
+        <div class="content">
+            <a href="#" class="more">
+                Learn more <i class="bx bxs-right-arrow-alt"></i>
+            </a>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing ell Essa soluta. 
+                Asperiores ratione recusandae atque cupidiate
+            </p>
+        </div>
+        <!-- Social Icons -->
+        <ul class="sci">
+            <li>
+                <a href="#"><i class="bx bxl-meta"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="bx bxl-youtube"></i></a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
